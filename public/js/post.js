@@ -8,6 +8,7 @@ const btnSubmit = document.querySelector(".submit-post");
 const newPost = () => {
   list.classList.add("hidden");
   postForm.classList.remove("hidden");
+  btnNewPost.classList.add("hidden");
 };
 
 const submitPost = async (e) => {
@@ -24,6 +25,7 @@ const submitPost = async (e) => {
     if (post.ok) {
       list.classList.remove("hidden");
       postForm.classList.add("hidden");
+      btnNewPost.classList.remove("hidden");
       document.location.replace("/post");
     } else {
       alert("Failed to post.");

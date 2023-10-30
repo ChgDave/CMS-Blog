@@ -10,6 +10,7 @@ const post = document.querySelector(".card");
 const newComment = () => {
   list.classList.add("hidden");
   commentForm.classList.remove("hidden");
+  btnNewComment.classList.add("hidden");
 };
 // function for sumbit comment
 const submitComment = async (e) => {
@@ -26,6 +27,7 @@ const submitComment = async (e) => {
     if (post.ok) {
       list.classList.remove("hidden");
       commentForm.classList.add("hidden");
+      btnNewComment.classList.remove("hidden");
       console.log("created new comment");
       document.location.replace(`/comment/post/${post_id}`);
     } else {
