@@ -1,0 +1,18 @@
+
+<div class="post-list">
+ {{#each posts as |post|}}
+{{> post-list}}
+{{/each}}
+</div>
+
+<form class="post-form card hidden">
+    <header>Title</header>
+    <input class="form-input title">
+    <header>Content</header>
+    <input class="form-input content">
+    <button class="btn btn-primary submit-post">Create</button>
+</form>
+
+<button class="new-post">New Post</button>
+
+<script src="/js/post.js"></script>
