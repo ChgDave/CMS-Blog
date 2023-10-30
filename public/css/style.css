@@ -167,7 +167,8 @@ img {
   align-items: center;
 }
 
-.content {
+.content,
+.comment {
   padding: 10px;
 }
 
@@ -181,4 +182,5 @@ img {
 
 .stamp {
   font-size: 10px;
+  text-align: end;
 }

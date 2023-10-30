@@ -3,6 +3,7 @@
 const btnUpdate = document.querySelector(".update-post");
 const btnDelete = document.querySelector(".delete-post");
 
+// function to update a post
 const updatePost = async (e) => {
   e.preventDefault();
   const title = document.querySelector(".title").value;
@@ -22,6 +23,7 @@ const updatePost = async (e) => {
   }
 };
 
+// function to delete a post
 const deletePost = async (e) => {
   e.preventDefault();
   const postId = document.querySelector(".post-form").dataset.postid;
@@ -38,5 +40,6 @@ const deletePost = async (e) => {
   }
 };
 
+// add eventlistener to buttons
 btnUpdate.addEventListener("click", updatePost);
 btnDelete.addEventListener("click", deletePost);

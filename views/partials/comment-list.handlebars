@@ -1,0 +1,37 @@
+{{#if (equal userId user_id)}}
+  <section class="card" data-commentid="{{id}}">
+    <a href="/comment/{{id}}">
+      <header>Comment</header>
+      <p class="comment">{{comment}}</p>
+      <p class="stamp">Added by
+        {{user.username}}
+        on
+        {{format_time createdAt}}</p>
+    </a>
+  </section>
+{{else}}
+  <section class="card" data-commentid="{{id}}">
+    <header>Comment</header>
+    <p class="comment">{{comment}}</p>
+    <p class="stamp">Added by
+      {{user.username}}
+      on
+      {{format_time createdAt}}</p>
+  </section>
+{{/if}}
+
+{{!-- <section
+  class="card"
+  data-commentid="{{id}}"
+  data-userid="{{user_id}}"
+  data-sessionuser="{{userId}}"
+>
+  <a href="/comment/{{id}}">
+    <header>Comment</header>
+    <p class="comment">{{comment}}</p>
+    <p class="stamp">Added by
+      {{user.username}}
+      on
+      {{format_time createdAt}}</p>
+  </a>
+</section> --}}

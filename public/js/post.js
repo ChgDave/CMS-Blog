@@ -22,14 +22,13 @@ const submitPost = async (e) => {
       headers: { "Content-Type": "application/json" },
     });
     if (post.ok) {
+      list.classList.remove("hidden");
+      postForm.classList.add("hidden");
       document.location.replace("/post");
     } else {
       alert("Failed to post.");
     }
   }
-
-  list.classList.remove("hidden");
-  postCard.classList.add("hidden");
 };
 
 btnNewPost.addEventListener("click", newPost);

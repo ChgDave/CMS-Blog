@@ -1,0 +1,26 @@
+<section class="card" data-postid="{{post.id}}" data-userid="{{post.user.id}}">
+    <header>{{post.title}}<p class="stamp">
+        Posted by
+        {{post.user.username}}
+        on
+        {{format_time post.createdAt}}
+      </p></header>
+    <p class="content">{{post.content}}</p>
+</section>
+
+
+<div class="comment-list">
+ {{#each comments as |comment|}}
+{{> comment-list userId=../userId}}
+{{/each}}
+</div>
+
+<form class="comment-form card hidden">
+    <header>Comment</header>
+    <input class="form-input comment-input">
+    <button class="btn btn-primary submit-comment">Add Comment</button>
+</form>
+
+<button class="new-comment" data-sessionuser="{{userId}}">New Comment</button>
+
+<script src="/js/comment.js"></script>

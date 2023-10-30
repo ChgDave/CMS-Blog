@@ -4,4 +4,8 @@ module.exports = {
     // We use the 'toLocaleTimeString()' method to format the time as H:MM:SS AM/PM
     return date.toLocaleDateString();
   },
+
+  equal: (num1, num2) => {
+    return num1 == num2 ? true : false;
+  },
 };

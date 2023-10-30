@@ -1,0 +1,13 @@
+<form
+  class="comment-form card"
+  data-postid="{{comment.post_id}}"
+  data-commentid="{{comment.id}}"
+>
+  <header>Comment</header>
+  <input class="form-input comment-input" value="{{comment.comment}}" />
+
+  <button class="btn btn-primary update-comment">Update Comment</button>
+  <button class="btn btn-primary delete-comment">Delete Comment</button>
+</form>
+
+<script src="/js/commentedit.js"></script>
